@@ -1,3 +1,8 @@
+export const metadata = {
+    title: "Root Layout", 
+    description:"code for root layout",
+  }
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
       <html lang="en">
