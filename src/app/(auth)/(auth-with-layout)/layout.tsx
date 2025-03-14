@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import "./styles.css";
 
+
+const [input,setInput]=("")
 const navLinks = [
     { name: "Login", href: "/login" },
     { name: "Register", href: "/register" },
@@ -18,6 +21,9 @@ export default function AuthLayout({
         <>
             <h2>Inner layout</h2>
             <div>
+                <div>
+                    <input value={input} onChange={(e)=>{e.target.value}} type="text" />
+                </div>
                 {navLinks.map((link) => {
                     const isActive = pathname.startsWith(link.href); // Fix inside function body
                     return (
