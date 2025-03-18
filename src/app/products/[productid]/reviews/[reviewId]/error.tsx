@@ -1,7 +1,7 @@
 "use client";
 
 
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; // ✅ Correct import
 import { startTransition, useTransition } from "react";
 export default function ErrorBoundary({error,reset}:{error:Error,reset:()=>void}){
     const router=useRouter()
